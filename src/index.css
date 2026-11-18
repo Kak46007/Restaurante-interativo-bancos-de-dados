@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #08080a;
+    color: #f97316;
+    font-family: 'Manrope', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0d11;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f97316, #c2410c);
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #ff9a3d 0%, #f97316 40%, #ea580c 70%, #9a3412 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      #ea580c 0%,
+      #ff9a3d 50%,
+      #ea580c 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .gold-border {
+    border: 1px solid rgba(249, 115, 22, 0.28);
+  }
+
+  .glass {
+    background: rgba(13, 13, 17, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(249, 115, 22, 0.18);
+  }
+
+  .glass-strong {
+    background: rgba(8, 8, 10, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(249, 115, 22, 0.22);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.18), 0 0 80px rgba(249, 115, 22, 0.08);
+  }
+
+  .gold-glow-strong {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.36), 0 0 60px rgba(249, 115, 22, 0.14);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
